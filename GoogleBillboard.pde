@@ -6,9 +6,24 @@ public void setup()
 public void draw()  
 {   
 	//not needed for this assignment
+	for(int pos=2; pos < e.length(); pos++)
+	{
+		double dNum = Double.parseDouble(e.substring(pos, pos+10));
+		if(isPrime(dNum)==true){
+			System.out.println(dNum);
+			break;
+		}
+	}
 }  
 public boolean isPrime(double dNum)  
 {   
     //to be finished later   
-    return true;  
+    if(dNum<=2)
+    	return false;
+    for(int i=2; i<=Math.sqrt(dNum); i++){
+    	if(dNum%i==0)
+    		return false;
+    }
+   
+return true; 
 } 
